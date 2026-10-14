@@ -14,4 +14,4 @@ echo "This is the addition : $COUNT"
 FRUITS=("Apple", "Banana", "Grapes")
 #echo ${FRUITS[@]}
 echo "This is are the fruits : ${FRUITS[@]}"
-
+echo "This is the first fruit : ${FRUITS[1]}"
