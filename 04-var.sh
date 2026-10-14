@@ -19,3 +19,4 @@ END_TIME=$(date +%s)
 TOTAL_TIME=$((END_TIME-START_TIME))
 echo "Total time taken for you to enter details : $TOTAL_TIME seconds" 
 
+echo "Total time taken to enter your details: $SECONDS"
