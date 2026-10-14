@@ -15,7 +15,6 @@ read -s age
 
 echo "Hi $name, your age is $age"
 END_TIME=$(date +%s)
-echo "User Entered his details"
 TOTAL_TIME=$((END_TIME-START_TIME))
 echo "Total time taken for the user to enter his details : $TOTAL_TIME seconds" 
 
