@@ -6,7 +6,11 @@ var3=30
 
 echo "The final value is : $((var1+var2+var3))"
 
-declare -i ADD=5
-COUNT=ADD+2
+declare -i COUNT=5
+COUNT=COUNT+2
 
-echo "$COUNT"
+echo "This is the addition : $COUNT"
+
+FRUITS="("Apple", "Banana", "Grapes")
+echo $FRUITS
+
