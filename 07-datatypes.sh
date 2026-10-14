@@ -12,5 +12,5 @@ COUNT=COUNT+2
 echo "This is the addition : $COUNT"
 
 FRUITS="("Apple", "Banana", "Grapes")
-echo $FRUITS
+echo ${FRUITS[@]}
 
