@@ -4,12 +4,12 @@ var1=1
 var2=2
 echo $((var1 + var2))
 
-S_TIME=$(date +%s)
-echo "Script execution started at: $S_TIME"
+START_TIME=$(date +%s)
+echo "Script execution started at: $START_TIME"
 sleep 10
 
-E_TIME=$(date +%s)
-echo "Script execution completed at: $E_TIME"
+END_TIME=$(date +%s)
+echo "Script execution completed at: $END_TIME"
 
-TOTAL_TIME=$(($E_TIME-$S_TIME))
+TOTAL_TIME=$(($END_TIME-$STAR_TIME))
 echo "Total time taken for script execution: $TOTAL_TIME"
