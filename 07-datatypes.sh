@@ -19,4 +19,4 @@ echo "This is the first fruit : ${FRUITS[1]}"
 echo "Please enter your name : "
 read name
 
-echo "Your name is : ${name} Ponneboina"
+echo "Your name is : $name Ponneboina"
