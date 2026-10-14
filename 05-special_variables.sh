@@ -18,3 +18,4 @@ wait $! #here script waits until $! command completes
 echo "Print Line Number: $LINENO"
 echo "previous command exit status: $?"
 echo "Total time executed for this script : $SECONDS"
+
