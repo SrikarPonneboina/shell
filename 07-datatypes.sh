@@ -7,6 +7,6 @@ var3=30
 echo "The final value is : $((var1+var2+var3))"
 
 declare -i COUNT=5
-addition=COUNT+2
+COUNT=COUNT+2
 
-echo "$addition"
+echo "$COUNT"
