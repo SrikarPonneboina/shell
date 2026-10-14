@@ -6,8 +6,7 @@ echo "Please enter your marks"
 read marks
 
 if ((marks<36)); then
-    echo "FAIL"
+    echo "Your are : FAIL"
 else 
-    echo "PASS"
+    echo "Your are : PASS"
 fi
-echo "end"
