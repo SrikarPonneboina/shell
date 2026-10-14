@@ -10,3 +10,4 @@ if ((marks<36)); then
 else 
     echo "Your are : PASS"
 fi
+exit 1
