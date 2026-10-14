@@ -6,7 +6,8 @@
 
 #Reading inputs from the user
 START_TIME=$(date +%s)
-echo "User Started Entering Details"
+echo "Calculating time for you to enter details..."
+sleep 2
 echo "Please enter your name: "
 read -s name
 
