@@ -1,3 +1,5 @@
-name=$1
-age=$2
-echo "how $name, your age is $age"
+#!/bin/bash
+#passing variables using parameters/arguments 
+name=$username
+age=$userage
+echo "Hi $name, your age is $age"
