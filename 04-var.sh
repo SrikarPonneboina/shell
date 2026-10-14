@@ -10,10 +10,18 @@ echo "Hi $name, your age is $age"
 
 
 #Know wheather your PASS or FAIL
-echo "please enter your marks : "
+echo "Please enter your marks"
 read marks
 
-if -i count (marks>50):
-echo "PASS"
-else 
-echo "FAIL"
+if [$marks -lt 33]; then
+    echo "FAIL"
+elif [$marks -lt 50]; then
+    echo "PASS"
+elif [$marks -lt 75]; then
+    echo "FIRST CLASS"
+elif [$marks -lt 75]; then
+    echo "DISTINCTION"
+else
+    echo "DISTINCTION"
+fi 
+echo "END"
