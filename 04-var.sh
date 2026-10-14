@@ -8,5 +8,4 @@ read -s age
 
 echo "Hi $name, your age is $age"
 
-echo 
 
