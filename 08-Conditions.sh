@@ -9,5 +9,5 @@ if ((marks<36)); then
     echo "FAIL"
 else 
     echo "PASS"
-
+fi
 echo "end"
