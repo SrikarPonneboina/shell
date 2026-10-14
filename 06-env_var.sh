@@ -1,0 +1,2 @@
+echo "$COURSE"
+echo "$DURATION"
