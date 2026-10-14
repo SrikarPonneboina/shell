@@ -6,7 +6,7 @@
 
 #Reading inputs from the user
 START_TIME=$(date +%s)
-echo "script start time : $START_TIME"
+echo "User Started Entering Details : $START_TIME"
 echo "Please enter your name: "
 read -s name
 
@@ -15,7 +15,7 @@ read -s age
 
 echo "Hi $name, your age is $age"
 END_TIME=$(date +%s)
-echo "Script compelted at : $END_TIME"
+echo "User Entered his details : $END_TIME"
 TOTAL_TIME=$((END_TIME-START_TIME))
-echo "Total time taken to execute the script : $TOTAL_TIME seconds" 
+echo "Total time taken for the user to enter his details : $TOTAL_TIME seconds" 
 
