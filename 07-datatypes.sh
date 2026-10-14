@@ -13,5 +13,5 @@ echo "This is the addition : $COUNT"
 
 FRUITS=("Apple", "Banana", "Grapes")
 #echo ${FRUITS[@]}
-echo ${FRUITS[@]}
+echo "This is are the fruits : ${FRUITS[@]}"
 
