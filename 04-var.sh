@@ -1,10 +1,10 @@
 #!/bin/bash
 #passing variables using parameters/arguments 
 echo "Please enter your name: "
-name=$ read
+read name
 
 
 echo "please enter your age:"
-age=$ read
+read age
 
 echo "Hi $name, your age is $age"
