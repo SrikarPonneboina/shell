@@ -10,7 +10,7 @@ echo "Reading user access.."
 if ((user_id == 0)); then
     echo "You are authorized"
 else 
-    echo "You are not authorized, please check are you running with SUDO access"
+    echo "You are not authorized, please check are you executing with SUDO access"
     exit 1
 fi
 
