@@ -3,7 +3,40 @@
 ##points to be noted
 #Installing user should have root access if not deny installation
 
+#!/bin/bash
 
+# Check if the user is root
+user_id=$(id -u)
+echo "Reading user access..."
+
+if ((user_id != 0)); then
+    echo "You are not authorized, please check if you are executing with SUDO access."
+    exit 1
+fi
+
+echo "You are authorized. Installing NGINX..."
+dnf install nginx -y
+
+# Verify that the nginx installation command succeeded
+if (($? != 0)); then
+    echo "Nginx installation failed, please check..."
+    exit 1
+fi
+
+echo "INSTALLING MYSQL..."
+dnf install mysql -y
+
+# Verify that the mysql installation command succeeded
+if (($? != 0)); then
+    echo "MySQL installation failed, please check..."
+    exit 1
+fi
+
+echo "BOTH NGINX AND MYSQL ARE INSTALLED ON THE SERVER..."
+echo "END"
+
+
+: << 'COMMENT_BLOCK'
 user_id=$(id -u)
 
 if ((user_id != 0)); then
@@ -23,7 +56,7 @@ fi
 
 echo "Installing mysql"
 dnf install msql -y
-
+COMMENT_BLOCK
 
 
 
