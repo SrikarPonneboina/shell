@@ -24,7 +24,7 @@ else
 fi
 dnf install mysql -y
 
-echo "Both nginx and mysql are installe in the server.."
+echo "BOTH NGINX AND MYSQL ARE INSTALLED ON THE SERVER.."
 
 echo "END"
 
