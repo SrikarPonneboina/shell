@@ -23,4 +23,4 @@ echo "Your name is : ${name} Ponneboina"
 
 FRUITS1=("Apple" "Banana" "Grapes")
 
-echo $FRUITS1
+echo $FRUITS1[1]
