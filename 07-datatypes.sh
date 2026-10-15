@@ -30,4 +30,4 @@ read sname
 echo "${name}${sname}@gmail.com"
 
 echo "Congralations .... your gmail account is created! "
-echo "Total time taken for your script : $HOURS"
+echo "Total time taken for your script : $seconds"
