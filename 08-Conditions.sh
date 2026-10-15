@@ -11,7 +11,7 @@ elif ((marks<55)); then
     echo "Your are : PASS"
 elif ((marks<75)); then
     echo "Your are first class"
-elif ((marks>75)); then
+elif ((marks>=75)); then
     echo "Your are Distinction"
 fi
 exit 1
