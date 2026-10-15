@@ -21,7 +21,6 @@ read name
 
 echo "Your name is : ${name} Ponneboina"
 
-variable1=srikar
-variable2=ponneboina
+FRUITS1=("Apple" "Banana" "Grapes")
 
-echo "This is the output of the variable1 and variable 2 $variable1 $variable2"
+echo $FRUITS1
