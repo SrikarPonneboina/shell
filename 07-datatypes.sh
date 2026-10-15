@@ -29,4 +29,4 @@ read sname
 
 echo "${name}${sname}@gmail.com"
 
-echo "Congralations .... your gmail account is created!"
+echo "Congralations .... your gmail account is created! ${name}${sname}@gmail.com"
