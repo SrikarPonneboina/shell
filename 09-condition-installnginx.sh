@@ -3,23 +3,31 @@
 ##points to be noted
 #Installing user should have root access if not deny installation
 
-echo "Reading user access.."
+
 user_id=$(id -u)
+echo "Reading user access.."
 
 if ((user_id == 0)); then
-    echo "Installing nignx..."
-else
-    echo "you are not authorized to run this script.."
+    echo "You are authorized"
+else 
+    echo "You are not authorized, please check are you running with SUDO access"
     exit 1
 fi
 
+if (($? == 0)); then
+    echo "Installing nignx..."
+else
+    echo "please check your access.."
+    exit 1
+fi
+
+echo "NGINX INSTALLING SUCCESSFULLY..."
 dnf isntall nginx -y
-echo "NGINX INSTALLED SUCCESSFULLY..."
 
 if (($? == 0)); then
     echo "INSTALLING MYSQL.."
 else
-    echo "Previous installation failed, please check.."
+    echo "Nginx installation failed, please check.."
     exit 1
 fi
 dnf install mysql -y
