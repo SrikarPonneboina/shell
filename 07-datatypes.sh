@@ -20,3 +20,13 @@ echo "Please enter your name : "
 read name
 
 echo "Your name is : ${name} Ponneboina"
+
+echo "Now your are going to create your gmail account :"
+echo "what is your First Name : "
+read name
+echo "what is your Second Name : "
+read sname
+
+echo "${name}${sname}@gmail.com"
+
+echo "Congralations .... your gmail account is created!"
