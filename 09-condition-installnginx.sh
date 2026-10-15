@@ -10,8 +10,9 @@ if ((user_id == 0)); then
     echo "Installing nignx..."
 else
     echo "you are not authorized to run this script.."
+    exit 1
 fi
-exit 1
+
 dnf isntall nginx -y
 echo "NGINX INSTALLED SUCCESSFULLY..."
 
@@ -19,9 +20,9 @@ if (($? <= 0)); then
     echo "INSTALLING MYSQL.."
 else
     echo "Previous installation failed, please check.."
+    exit 1
 fi
 dnf install mysql -y
-exit 1
 
 echo "Both nginx and mysql are installe in the server.."
 
