@@ -6,7 +6,7 @@
 echo "Reading user access.."
 user_id=$(id-u)
 
-if ((user_id == 0)); then
+if ((user_id <= 0)); then
     echo "Installing nignx..."
 else
     echo "you are not authorized to run this script.."
