@@ -16,7 +16,7 @@ fi
 dnf isntall nginx -y
 echo "NGINX INSTALLED SUCCESSFULLY..."
 
-if (($? <= 0)); then
+if (($? == 0)); then
     echo "INSTALLING MYSQL.."
 else
     echo "Previous installation failed, please check.."
