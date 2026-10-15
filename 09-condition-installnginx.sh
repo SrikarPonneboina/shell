@@ -4,9 +4,9 @@
 #Installing user should have root access if not deny installation
 
 echo "Reading user access.."
-user_id=$(id-u)
+user_id=$(id -u)
 
-if ((user_id <= 0)); then
+if ((user_id == 0)); then
     echo "Installing nignx..."
 else
     echo "you are not authorized to run this script.."
