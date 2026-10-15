@@ -22,7 +22,7 @@ else
 fi
 
 echo "NGINX INSTALLING SUCCESSFULLY..."
-dnf isntall nginx -y
+dnf install nginx -y
 
 if (($? == 0)); then
     echo "INSTALLING MYSQL.."
