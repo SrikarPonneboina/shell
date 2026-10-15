@@ -21,7 +21,7 @@ if (($? =! 0)); then
 fi
 
 echo "Installing mysql"
-dnf install msql -y
+dnf install mysql -y
 
 if (($? != 0)); then
     echo "MySql Installation Failed, please check..."
