@@ -3,7 +3,6 @@
 ##points to be noted
 #Installing user should have root access if not deny installation
 
-#!/bin/bash
 
 user_id=$(id -u)
 echo "Reading user access.."
