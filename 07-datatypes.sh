@@ -24,4 +24,4 @@ echo "Your name is : ${name} Ponneboina"
 variable1=srikar
 variable2=ponneboina
 
-echo $variable1 $variable2
+echo "This is the output of the variable1 and variable 2 $variable1 $variable2"
