@@ -5,6 +5,30 @@
 
 
 user_id=$(id -u)
+
+if ((user_id != 0)); then
+    echo "You are not authorized to execute this script"
+    exit 1
+fi
+echo "You are authorized"
+echo "Installing nginx.."
+dnf install nginx -y
+
+if (($? =! 0)); then
+    echo "Nginx installation success, please check your access"
+else
+    echo "Nginx installation failed, please check your access"
+    exit 1
+fi
+
+echo "Installing mysql"
+dnf install msql -y
+
+
+
+
+: << 'COMMENT_BLOCK'
+user_id=$(id -u)
 echo "Reading user access.."
 
 if ((user_id == 0)); then
@@ -34,5 +58,5 @@ dnf install mysql -y
 
 echo "BOTH NGINX AND MYSQL ARE INSTALLED ON THE SERVER.."
 
-echo "END"
-
+echo "END
+COMMENT_BLOCK
