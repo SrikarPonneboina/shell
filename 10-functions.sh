@@ -10,9 +10,16 @@ echo "This is the user id : $user_id"
 
 
 validate() {
-    dnf install ${package} -y
+    dnf install $(package) -y
     echo "${package} is installing"
 }
+
+
+
+
+
+
+
 
 : << 'COMMENT_BLOCK'
 if ((user_id != 0)); then
