@@ -10,7 +10,11 @@ echo "This is the user id : $user_id"
 
 
 validate() {
-    dnf install $(package) -y
+    if ((user_id != 0)); then
+    echo "${package} ..FAILED"
+    exit 1
+    fi
+    dnf install ${package} -y
     echo "${package} is installing"
 }
 
