@@ -29,6 +29,8 @@ validate(){
 
 validate "nginx"
 validate "mysql"
+validate "nodejs"
+validate "git"
 
 
 
