@@ -27,8 +27,8 @@ validate(){
     fi
 }
 
-#validate "nginx"
-#validate "mysql"
+validate "nginx"
+validate "mysql"
 
 
 
