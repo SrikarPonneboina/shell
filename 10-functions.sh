@@ -17,7 +17,7 @@ fi
 validate(){
     local package=$1
     echo "${package}.. is installing"
-    dnf install "${package}" -y
+    dnf remove "${package}" -y
 
     if (($? == 0)); then
         echo "${package}.. installed successfully"
