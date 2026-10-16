@@ -8,6 +8,13 @@ user_id=$(id -u)
 
 echo "This is the user id : $user_id"
 
+
+validate() {
+    dnf install ${package} -y
+    echo "${package} is installing"
+}
+
+: << 'COMMENT_BLOCK'
 if ((user_id != 0)); then
     echo "Nginx installation FAILED"
     exit 1
@@ -23,3 +30,4 @@ echo "Mysql installing successfully.."
 dnf install mysql -y
 
 echo "END"
+COMMENT_BLOCK
