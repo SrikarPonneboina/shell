@@ -15,7 +15,7 @@ if ((user_id != 0)); then
 fi
 
 validate(){
-    
+    local package=$1
     echo "${package}.. is installing"
     dnf install "${package}" -y
 
