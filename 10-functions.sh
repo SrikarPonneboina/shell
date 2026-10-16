@@ -17,7 +17,7 @@ fi
 validate(){
     
     echo "${package}.. is installing"
-    dnf install ${package} -y
+    dnf install "${package}" -y
 
     if (($? == 0)); then
         echo "${package}.. installed successfully"
