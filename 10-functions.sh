@@ -10,7 +10,7 @@ echo "This is the user id : $user_id"
 
 #checking..is user running with root privileges..
 if ((user_id != 0)); then
-    echo "ERROR: you need to run with root or sudo"
+    echo "ERROR: you need to run with root or sudo access"
     exit 1
 fi
 
