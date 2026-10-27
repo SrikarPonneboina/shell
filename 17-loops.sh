@@ -19,11 +19,11 @@ for package in $@
 do
     dnf list installed ${package}
     if [ $? -ne 0 ]; then
-        echo "Installing ${Y}${package}${N}"
+        echo -e "Installing ${Y}${package}${N}"
         dnf install ${package} -y 
         validate $? "${package} installtion"
     else
-        echo "${package}.. already installed.. ${Y}SKIPPING${N}"
+        echo -e "${package}.. already installed.. ${Y}SKIPPING${N}"
     fi
 done
 
@@ -31,9 +31,9 @@ validate(){
     exit_status=$1
     description=$2
     if [ $exit_status -ne 0 ]; then
-        echo "${description} ..${R}FAILED${N}"
+        echo -e "${description} ..${R}FAILED${N}"
         exit 1
     else
-        echo "${description} ..${G}SUCCESS${N}"
+        echo -e "${description} ..${G}SUCCESS${N}"
     fi
 }
