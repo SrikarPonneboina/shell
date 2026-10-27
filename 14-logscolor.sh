@@ -21,10 +21,10 @@ validate() {
     exit_status=$1
     description=$2
     if [ $exit_status -ne 0 ]; then
-        echo "${description}.. ${R}FAILED${N}"
+        echo -e "${description}.. ${R}FAILED${N}"
         exit 1
     else
-        echo "${description}.. ${G}SUCCESS${N}"
+        echo -e "${description}.. ${G}SUCCESS${N}"
     fi
 }
 
