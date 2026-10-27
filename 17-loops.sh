@@ -14,7 +14,7 @@ if [ $user_id -ne 0 ]; then
     echo "ERROR: Please run with sudo or root access" | tee -a $logs_file
     exit 1
 fi
-echo "script execution started at $(date +"%F %T")"
+echo "script execution started at $(date +"%F %T")" &>> $logs_file
 validate(){
     exit_status=$1
     description=$2
@@ -38,4 +38,4 @@ do
     fi
 done
 
-echo "script execution completed at $(date +"%F %T")"
+echo "script execution completed at $(date +"%F %T")" &>> $logs_file
