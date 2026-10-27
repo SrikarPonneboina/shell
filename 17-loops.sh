@@ -21,7 +21,7 @@ do
     if [ $? -ne 0 ]; then
         echo -e "Installing ${Y}${package}${N}" | tee -a $logs_file
         dnf install ${package} -y &>> $logs_file
-        validate $? "${package} installation"
+        validate "$?" "${package} installation"
     else
         echo -e "${package}.. already installed.. ${Y}SKIPPING${N}" | tee -a $logs_file
     fi
