@@ -1,5 +1,5 @@
 #!/bin/bash
-#This scripts packages with arguments and if the package is installed it skips
+#This scripts installs packages with arguments and if the package is installed it skips
 
 user_id=$(id -u)
 logs_folder="/var/log/shelllogs"
