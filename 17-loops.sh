@@ -17,6 +17,7 @@ do
         validate $? "${package} installtion"
     else
         echo "${package}.. already installed.. SKIPPING"
+    fi
 done
 
 validate(){
