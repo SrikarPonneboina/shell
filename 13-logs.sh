@@ -18,10 +18,10 @@ validate(){
     exitstatus=$1
     description=$2
     if [ $exitstatus -ne 0 ]; then
-        echo "${description}...FAILED" | tee -a $log_file
+        echo "${description}...FAILED" | tee -a $logs_file
         exit 1
     else
-        echo "${description}...SUCCESS" | tee -a $log_file
+        echo "${description}...SUCCESS" | tee -a $logs_file
     fi
 }
 
