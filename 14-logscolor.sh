@@ -29,7 +29,7 @@ validate() {
 }
 
 echo "Installing packages.."
-dnf install ngix -y 
+dnf install nginx -y 
 validate $? "Nginx installation"
 
 dnf install mysql -y
