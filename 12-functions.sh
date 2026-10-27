@@ -12,7 +12,7 @@ fi
 validate(){
     last_exitstatus=$1
     description=$2
-    if [ $1 -ne 0]; then
+    if [ $1 -ne 0 ]; then
         echo "${2}...FAILED"
         exit 1
     else
