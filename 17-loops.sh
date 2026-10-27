@@ -11,7 +11,7 @@ fi
 for package in $@
 do
     dnf list installed ${package}
-    if [ $? -ne 0 ]; then
+    if [ $? -ne 1 ]; then
         echo "Installing ${package}"
         dnf install ${package} -y 
         validate $? "${package} installtion"
