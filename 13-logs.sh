@@ -26,10 +26,10 @@ validate(){
 }
 
 echo "Installing packages.."
-dnf install nginx -y &>> $log_file
+dnf install nginx -y &>> $logs_file
 validate $? "Nginx installation"
 
-dnf install mysql -y &>> $log_file
+dnf install mysql -y &>> $logs_file
 validate $? "Mysql installation"
 
 echo "package installation completed.." 
