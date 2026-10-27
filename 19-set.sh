@@ -12,7 +12,7 @@ fi
 
 for package in $@
 do
-    dnf list installed $package || true
+    dnf list installed $package 
     if [ $? -ne 0 ]; then
         dnf install ${package} -y
         echo "${package} installed successfully"
