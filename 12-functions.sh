@@ -20,7 +20,6 @@ validate(){
     fi
 }
 
-
 echo "Installing packages.."
 dnf install nginx -y 
 validate $? "Nginx installation"
