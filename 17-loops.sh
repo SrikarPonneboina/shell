@@ -8,12 +8,23 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+mkdir -p ${logs_folder}
 
 if [ $user_id -ne 0 ]; then
     echo "ERROR: Please run with sudo or root access" | tee -a $logs_file
     exit 1
 fi
-mkdir -p ${logs_folder}
+
+validate(){
+    exit_status=$1
+    description=$2
+    if [ $exit_status -ne 0 ]; then
+        echo -e "${description} ..${R}FAILED${N}" | tee -a $logs_file
+        exit 1
+    else
+        echo -e "${description} ..${G}SUCCESS${N}" | tee -a $logs_file
+    fi
+}
 
 for package in $@
 do
@@ -27,13 +38,3 @@ do
     fi
 done
 
-validate(){
-    exit_status=$1
-    description=$2
-    if [ $exit_status -ne 0 ]; then
-        echo -e "${description} ..${R}FAILED${N}" | tee -a $logs_file
-        exit 1
-    else
-        echo -e "${description} ..${G}SUCCESS${N}" | tee -a $logs_file
-    fi
-}
