@@ -4,7 +4,7 @@ user_id=$(id -u)
 logs_folder="/var/log/shell-practicelogs"
 logs_file="${logs_folder}/${0}.log"
 
-echo "This is the user id = $user_id" &>> $log_file
+echo "This is the user id = $user_id" | &>> $log_file
 
 if [ $user_id -ne 0 ]; then
     echo "ERROR: you need to run with sudo access or root" | tee -a &>> $log_file
