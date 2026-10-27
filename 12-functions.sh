@@ -10,13 +10,13 @@ if [ $user_id -ne 0 ]; then
 fi
 
 validate(){
-    last_exitstatus=$1
+    exitstatus=$1
     description=$2
-    if [ $1 -ne 0 ]; then
-        echo "${2}...FAILED"
+    if [ $exitstatus -ne 0 ]; then
+        echo "${description}...FAILED"
         exit 1
     else
-        echo "${2}...SUCCESS"
+        echo "${description}...SUCCESS"
     fi
 }
 
