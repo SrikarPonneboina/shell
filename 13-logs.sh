@@ -4,16 +4,16 @@ user_id=$(id -u)
 logs_folder="/var/log/shell-practice"
 logs_file="${logs_folder}/${0}.log"
 
-echo "This is the user id = $user_id" 
+echo "This is the user id = $user_id" &>> $logs_file 
 
 if [ $user_id -ne 0 ]; then
-    echo "ERROR: you need to run with sudo access or root" 
+    echo "ERROR: you need to run with sudo access or root" &>> $logs_file 
     exit 1
 fi
 
 mkdir -p $logs_folder
 
-echo "script execution started at $(date)" 
+echo "script execution started at $(date)" &>> $logs_file
 validate(){
     exitstatus=$1
     description=$2
@@ -32,5 +32,5 @@ validate $? "Nginx installation"
 dnf install mysql -y &>> $logs_file
 validate $? "Mysql installation"
 
-echo "package installation completed.." 
-echo "script execution completed at $(date)" 
+echo "package installation completed.." | tee -a $logs_file 
+echo "script execution completed at $(date)" &>> $logs_file 
