@@ -3,9 +3,13 @@
 #This scripts installs packages using arguments#
 
 user_id=$(id -u)
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 if [ $user_id -ne 0 ]; then
-    echo "ERROR: Please execute with sudo or root access"
+    echo -e "${R}ERROR${N}: Please execute with sudo or root access"
     exit 1
 fi
 
@@ -13,10 +17,10 @@ validate() {
     exit_status=$1
     description=$2
     if [ $exit_status -ne 0 ]; then
-        echo "${description}.. FAILED"
+        echo -e "${description}.. ${R}FAILED${N}"
         exit 1
     else
-        echo "${description}.. SUCCESS"
+        echo -e "${description}.. ${G}SUCCESS${N}"
     fi
 }
 
