@@ -2,7 +2,7 @@
 
 set -e
 
-trap 'echo "Error at $LINENO , command: "$BASH_COMMAND"' ERR
+trap 'echo "Error at "$LINENO" , command: "$BASH_COMMAND"' ERR
 
 user_id=$(id -u)
 if [ $user_id -ne 0 ]; then
