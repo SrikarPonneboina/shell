@@ -1,7 +1,7 @@
 #!/bin/bash
 #installing nginx and mysql using functions 
 user_id=$(id -u)
-logs_folder="/var/log/shell-practicelogs"
+logs_folder="/var/log/shell-practice"
 logs_file="${logs_folder}/${0}.log"
 
 echo "This is the user id = $user_id" 
